@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}
+  </title>
+
+  <meta
+    name="description"
+    content="{{ site.Params.description }}"
+  >
+
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+
+  <script
+    type="module"
+    src="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/ui-shell.min.js">
+  </script>
+
+  <script
+    type="module"
+    src="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/button.min.js">
+  </script>
+</head>
+
+<body>
+
+  <cds-header aria-label="Build with Bob">
+
+    <cds-header-name href="{{ "/" | relURL }}" prefix="IBM">
+      Build with Bob
+    </cds-header-name>
+
+    <cds-header-nav menu-bar-label="Build with Bob">
+
+      <cds-header-nav-item href="{{ "/" | relURL }}">
+        Home
+      </cds-header-nav-item>
+
+      <cds-header-nav-item href="{{ "/projects/" | relURL }}">
+        Projects
+      </cds-header-nav-item>
+
+      <cds-header-nav-item href="{{ "/about/" | relURL }}">
+        About
+      </cds-header-nav-item>
+
+    </cds-header-nav>
+
+  </cds-header>
+
+  <main id="main-content">
+
+    {{ block "main" . }}
+    {{ end }}
+
+  </main>
+
+</body>
+</html>
