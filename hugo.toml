@@ -1,0 +1,6 @@
+baseURL = "https://ibm.github.io/build-with-bob/"
+languageCode = "en-us"
+title = "Build with Bob"
+
+[params]
+  description = "Explore what creators are building with IBM Bob."
