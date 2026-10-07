@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<section class="section">
+
+  <div class="content-wrapper">
+
+    <h1>
+      {{ .Title }}
+    </h1>
+
+    <p class="section-intro">
+      {{ .Content }}
+    </p>
+
+    <div class="project-grid">
+
+      {{ range .Pages }}
+
+      <article class="project-card">
+
+        <p class="eyebrow">
+          {{ .Params.author }}
+        </p>
+
+        <h2>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </h2>
+
+        <p>
+          {{ .Params.description }}
+        </p>
+
+      </article>
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>
+
+{{ end }}
