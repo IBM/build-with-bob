@@ -1,0 +1,105 @@
+:root {
+  --background: #ffffff;
+  --layer: #f4f4f4;
+  --text-primary: #161616;
+  --text-secondary: #525252;
+  --blue: #0f62fe;
+  --border: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    "IBM Plex Sans",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+}
+
+#main-content {
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hero {
+  background: #161616;
+  color: white;
+  min-height: 520px;
+  padding-top: 112px;
+  padding-bottom: 80px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.16px;
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: 0 0 32px 0;
+  max-width: 900px;
+}
+
+.hero-description {
+  color: #c6c6c6;
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  margin-top: 32px;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 96px;
+}
+
+.section h2 {
+  font-size: 42px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.section-intro {
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+@media (max-width: 672px) {
+
+  .content-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 96px;
+  }
+
+}
