@@ -103,3 +103,39 @@ body {
   }
 
 }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 1px;
+  background: var(--border);
+  margin-top: 48px;
+}
+
+.project-card {
+  background: var(--layer);
+  padding: 32px;
+  min-height: 260px;
+}
+
+.project-card h2 {
+  font-size: 28px;
+}
+
+.project-card a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.article-content {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+}
