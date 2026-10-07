@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<article class="section">
+
+  <div class="content-wrapper">
+
+    <p class="eyebrow">
+      {{ .Section | title }}
+    </p>
+
+    <h1>
+      {{ .Title }}
+    </h1>
+
+    {{ with .Params.author }}
+
+      <p>
+        By {{ . }}
+      </p>
+
+    {{ end }}
+
+    <div class="article-content">
+
+      {{ .Content }}
+
+    </div>
+
+  </div>
+
+</article>
+
+{{ end }}
