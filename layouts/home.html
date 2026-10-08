@@ -2,26 +2,42 @@
 
 <section class="hero">
 
-  <div class="content-wrapper">
+  <div class="content-wrapper hero-inner">
 
-    <p class="eyebrow">IBM Bob</p>
+    <div class="hero-text">
 
-    <h1>
-      Build something.<br>
-      Share what you learned.
-    </h1>
+      <p class="eyebrow">IBM Bob</p>
 
-    <p class="hero-description">
-      Discover projects, videos, experiments, and tutorials from creators
-      building with IBM Bob.
-    </p>
+      <h1>
+        Build something.<br>
+        Share what you learned.
+      </h1>
 
-    <div class="hero-actions">
+      <p class="hero-description">
+        Discover projects, videos, experiments, and tutorials from creators
+        building with IBM Bob.
+      </p>
 
-      <cds-button href="{{ "/projects/" | relURL }}">
-        Explore projects
-      </cds-button>
+      <div class="hero-actions">
 
+        <cds-button href="{{ "/projects/" | relURL }}">
+          Explore projects
+        </cds-button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-mascot">
+      <div class="bob-bg">
+        <img
+          src="{{ "images/hero-background-dark.webp" | relURL }}"
+          alt=""
+          class="bob-bg-img"
+          aria-hidden="true"
+        />
+        <div class="bob-container" id="bob-lottie" aria-label="IBM Bob mascot waving hello" role="img"></div>
+      </div>
     </div>
 
   </div>

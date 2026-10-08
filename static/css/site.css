@@ -45,6 +45,67 @@ body {
   padding-bottom: 80px;
 }
 
+/* Two-column hero layout */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.hero-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.hero-mascot {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Wrapper that stacks the bg image behind Bob */
+.bob-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background tech-icons image */
+.bob-bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  max-width: 90vw;
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Bob mascot Lottie container — sits on top of the bg */
+.bob-container {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .bob-container {
+    width: 220px;
+  }
+}
+
 .eyebrow {
   font-size: 14px;
   letter-spacing: 0.16px;
@@ -100,6 +161,10 @@ body {
   .hero {
     min-height: auto;
     padding-top: 96px;
+  }
+
+  .bob-container {
+    width: 160px;
   }
 
 }

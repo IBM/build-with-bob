@@ -24,6 +24,9 @@
     type="module"
     src="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/button.min.js">
   </script>
+
+  <!-- lottie-web for Bob waving animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 
 <body>
@@ -58,6 +61,20 @@
     {{ end }}
 
   </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById('bob-lottie');
+      if (!el || typeof lottie === 'undefined') return;
+      lottie.loadAnimation({
+        container: el,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '{{ "animations/bob-wave.json" | relURL }}'
+      });
+    })();
+  </script>
 
 </body>
 </html>
