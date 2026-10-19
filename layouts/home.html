@@ -1,63 +1,453 @@
 {{ define "main" }}
 
-<section class="hero">
-
-  <div class="content-wrapper hero-inner">
-
-    <div class="hero-text">
-
-      <p class="eyebrow">IBM Bob</p>
-
-      <h1>
-        Build something.<br>
-        Share what you learned.
-      </h1>
-
-      <p class="hero-description">
-        Discover projects, videos, experiments, and tutorials from creators
-        building with IBM Bob.
-      </p>
-
-      <div class="hero-actions">
-
-        <cds-button href="{{ "/projects/" | relURL }}">
-          Explore projects
-        </cds-button>
-
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <div class="content-wrapper hero-container">
+    <div class="hero-content">
+      <p class="section-tag-hero">REAL PROJECTS. REAL PROBLEMS. REAL PROOF.</p>
+      <h1 class="hero-title">Build with <span class="highlight-blue">Bob.</span></h1>
+      <p class="hero-subtitle">Discover real projects, solve real problems, and build what's next with IBM Bob.</p>
+      <p class="hero-description">Join creators, developers and the community to modernize code, build faster and turn ideas into impact with IBM Bob.</p>
+      
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary btn-lg">Explore Projects</a>
+        <a href="#download" class="btn btn-outline btn-lg">Try Bob for Free &rarr;</a>
       </div>
 
-    </div>
+      <div class="hero-perks">
+        <div class="perk-item">
+          <div class="perk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div>
+            <strong>30-day free trial</strong>
+            <span>Get started in minutes</span>
+          </div>
+        </div>
 
-    <div class="hero-mascot">
-      <div class="bob-bg">
-        <img
-          src="{{ "images/hero-background-dark.webp" | relURL }}"
-          alt=""
-          class="bob-bg-img"
-          aria-hidden="true"
-        />
-        <div class="bob-container" id="bob-lottie" aria-label="IBM Bob mascot waving hello" role="img"></div>
+        <div class="perk-item">
+          <div class="perk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <div>
+            <strong>Works across</strong>
+            <span>Windows, macOS, Linux</span>
+          </div>
+        </div>
+
+        <div class="perk-item">
+          <div class="perk-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <strong>No credit card required</strong>
+            <span>Start building today</span>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="hero-visual">
+      <div class="mascot-speech-bubble">
+        <h4>Hi, I'm Bob!</h4>
+        <p>Your AI partner for modernizing, building and innovating real-world applications.</p>
+      </div>
+
+      <div class="mascot-showcase">
+        <div class="bob-bg">
+          <img
+            src="{{ "images/hero-background-dark.webp" | relURL }}"
+            alt=""
+            class="bob-bg-img"
+            aria-hidden="true"
+          />
+          <div class="bob-container" id="bob-lottie" aria-label="IBM Bob mascot waving hello" role="img"></div>
+        </div>
+
+        <div class="hero-laptop-preview">
+          <div class="laptop-screen">
+            <div class="modernize-card-floating">
+              <div class="modernize-header">
+                <h5>Modernize</h5>
+              </div>
+              <ul class="modernize-checklist">
+                <li><span class="check-icon">&#10003;</span> Analyze code</li>
+                <li><span class="check-icon">&#10003;</span> Suggest improvements</li>
+                <li><span class="check-icon">&#10003;</span> Generate updates</li>
+                <li><span class="check-icon">&#10003;</span> Explain changes</li>
+                <li><span class="check-icon">&#10003;</span> Help you deploy</li>
+              </ul>
+            </div>
+            <div class="code-bg-lines">
+              <div class="code-line w-80"></div>
+              <div class="code-line w-60"></div>
+              <div class="code-line w-90"></div>
+              <div class="code-line w-40"></div>
+              <div class="code-line w-70"></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </section>
 
+<!-- Continuous Journey Section -->
+<section class="journey-section" id="journey">
+  <div class="content-wrapper text-center">
+    <h2 class="section-heading">A Continuous Journey with Bob</h2>
+    <p class="section-subheading">From legacy code to what's next &mdash; build, test, modernize and innovate, with Bob by your side.</p>
+    
+    <div class="journey-lifecycle-wrapper">
+      <div class="journey-quadrant build">
+        <div class="journey-badge-icon icon-blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="journey-text-content">
+          <h3>Build</h3>
+          <p>Create and prototype faster with AI assistance.</p>
+        </div>
+      </div>
 
-<section class="section">
+      <div class="journey-quadrant test">
+        <div class="journey-badge-icon icon-purple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.89 20.21A2 2 0 0 0 6.64 23h10.72a2 2 0 0 0 1.75-2.79L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="7" y1="16" x2="17" y2="16"/></svg>
+        </div>
+        <div class="journey-text-content">
+          <h3>Test</h3>
+          <p>Validate, debug and ensure quality with confidence.</p>
+        </div>
+      </div>
 
-  <div class="content-wrapper">
+      <div class="journey-center-hub">
+        <div class="hub-circular-arrows">
+          <svg class="cycle-svg" viewBox="0 0 260 260">
+            <defs>
+              <linearGradient id="cycleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0f62fe"/>
+                <stop offset="50%" stop-color="#8a3ffc"/>
+                <stop offset="100%" stop-color="#0072c3"/>
+              </linearGradient>
+            </defs>
+            <circle cx="130" cy="130" r="105" fill="none" stroke="url(#cycleGrad)" stroke-width="12" stroke-dasharray="140 25 140 25" stroke-linecap="round"/>
+          </svg>
+          <div class="hub-bob-avatar">
+            <img src="{{ "images/BOB.png" | relURL }}" alt="IBM Bob" class="hub-bob-img" />
+          </div>
+        </div>
+      </div>
 
-    <h2>Built by the community</h2>
+      <div class="journey-quadrant innovate">
+        <div class="journey-badge-icon icon-light-blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/></svg>
+        </div>
+        <div class="journey-text-content">
+          <h3>Innovate</h3>
+          <p>Turn ideas into real-world solutions and greater impact.</p>
+        </div>
+      </div>
 
-    <p class="section-intro">
-      See how developers and creators are experimenting with IBM Bob,
-      sharing ideas, solving problems, and building new experiences.
-    </p>
-
+      <div class="journey-quadrant modernize">
+        <div class="journey-badge-icon icon-teal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="journey-text-content">
+          <h3>Modernize</h3>
+          <p>Transform legacy applications for the future.</p>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
+<!-- Creator Challenges & Video Showcase -->
+<section class="creators-section" id="creators">
+  <div class="content-wrapper">
+    <div class="section-header-flex">
+      <div>
+        <p class="section-tag">CREATOR CHALLENGES & VIDEO SHOWCASE</p>
+        <h2 class="section-heading">See how creators build <span class="highlight-blue">with Bob.</span></h2>
+        <p class="section-subheading max-w-600">Watch creators tackle real challenges &mdash; whether IBM seed problems or their own technical debt &mdash; and see Bob in action.</p>
+        <div class="mt-4">
+          <a href="{{ "creators/" | relURL }}" class="btn btn-primary">Watch All Videos &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="creators-grid mt-6">
+      <a href="{{ "creators/andrew-codesmith/" | relURL }}" class="creator-card">
+        <div class="creator-video-thumb thumb-1">
+          <img src="{{ "images/Andrew.png" | relURL }}" alt="Andrew Codesmith" class="creator-thumb-img" />
+          <div class="video-play-btn" aria-label="Play video">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="creator-info">
+          <h4 class="creator-name">Andrew Codesmith</h4>
+          <p class="creator-handle">@andrewcodesmith</p>
+          <span class="category-pill">Modernize & Refactor</span>
+        </div>
+      </a>
+
+      <a href="{{ "creators/kedasha-kerr/" | relURL }}" class="creator-card">
+        <div class="creator-video-thumb thumb-3">
+          <img src="{{ "images/k.png" | relURL }}" alt="PikaCodes (Kedasha Kerr)" class="creator-thumb-img" />
+          <div class="video-play-btn" aria-label="Play video">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="creator-info">
+          <h4 class="creator-name">PikaCodes</h4>
+          <p class="creator-handle">@pikacodes</p>
+          <span class="category-pill">Open Source & DevTools</span>
+        </div>
+      </a>
+
+      <a href="{{ "creators/sajjaad-khader/" | relURL }}" class="creator-card">
+        <div class="creator-video-thumb thumb-4">
+          <img src="{{ "images/t.png" | relURL }}" alt="Sajjaad Khader" class="creator-thumb-img" />
+          <div class="video-play-btn" aria-label="Play video">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="creator-info">
+          <h4 class="creator-name">Sajjaad Khader</h4>
+          <p class="creator-handle">@sajjaadkhader</p>
+          <span class="category-pill">Cloud & Modernization</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Outcomes & Solutions Section -->
+<section class="outcomes-section" id="projects">
+  <div class="content-wrapper">
+    <div class="section-header-row">
+      <div>
+        <p class="section-tag">OUTCOMES & SOLUTIONS</p>
+        <h2 class="section-heading">From idea to <span class="highlight-blue">impact.</span></h2>
+        <p class="section-subheading">Explore the finished projects, before-and-after transformations, and key technical takeaways.</p>
+      </div>
+      <div class="header-right-link">
+        <a href="#projects" class="link-arrow">View All Projects &rarr;</a>
+      </div>
+    </div>
+
+    <div class="outcomes-grid mt-6">
+      <!-- Project 1 -->
+      <div class="outcome-card">
+        <div class="outcome-top">
+          <div class="outcome-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="21" width="18" height="2"/><path d="M4 10h16M2 10l10-7 10 7M6 10v11M10 10v11M14 10v11M18 10v11"/></svg>
+          </div>
+          <h3 class="outcome-title">Modernizing a Legacy Banking App</h3>
+          <p class="outcome-metric"><strong>30%</strong> faster performance</p>
+        </div>
+
+        <div class="code-compare-box">
+          <div class="code-block-mini before">
+            <span class="code-label">Before</span>
+            <pre><code>// COBOL Bridge
+EXEC CICS
+  READ FILE('ACCT')
+  INTO(ACCT-REC)
+END-EXEC.</code></pre>
+          </div>
+          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-block-mini after">
+            <span class="code-label">After (with Bob)</span>
+            <pre><code>// Microservice
+const account = await
+  db.accounts.findUnique({
+    where: { id }
+  });</code></pre>
+          </div>
+        </div>
+
+        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="outcome-card">
+        <div class="outcome-top">
+          <div class="outcome-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="outcome-title">Refactoring a Monolithic E-commerce API</h3>
+          <p class="outcome-metric"><strong>40%</strong> reduction in technical debt</p>
+        </div>
+
+        <div class="code-compare-box">
+          <div class="code-block-mini before">
+            <span class="code-label">Before</span>
+            <pre><code>// 2,400 LOC file
+function checkout(cart) {
+  validate(cart);
+  calcTax(); bill();
+}</code></pre>
+          </div>
+          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-block-mini after">
+            <span class="code-label">After (with Bob)</span>
+            <pre><code>// Modular services
+export class CheckoutService {
+  constructor(tax, pay) {}
+  async process() {}
+}</code></pre>
+          </div>
+        </div>
+
+        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="outcome-card">
+        <div class="outcome-top">
+          <div class="outcome-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3 class="outcome-title">Modernizing a Data Processing Pipeline</h3>
+          <p class="outcome-metric"><strong>2x</strong> faster data processing</p>
+        </div>
+
+        <div class="code-compare-box">
+          <div class="code-block-mini before">
+            <span class="code-label">Before</span>
+            <pre><code># Serial Sync
+for record in stream:
+    transform(record)
+    save_to_disk()</code></pre>
+          </div>
+          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-block-mini after">
+            <span class="code-label">After (with Bob)</span>
+            <pre><code># Vectorized Async
+df = polars.read_ipc()
+results = await asyncio.
+  gather(*workers)</code></pre>
+          </div>
+        </div>
+
+        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Community Contributions & Recognition -->
+<section class="community-section" id="community">
+  <div class="content-wrapper">
+    <div class="section-header-row">
+      <div>
+        <p class="section-tag">COMMUNITY CONTRIBUTIONS & RECOGNITION</p>
+        <h2 class="section-heading">A community that <span class="highlight-blue">builds together.</span></h2>
+        <p class="section-subheading">Explore community ideas, suggested fixes and real-world use cases that creators integrated into their builds.</p>
+      </div>
+      <div class="header-right-link">
+        <a href="#community" class="link-arrow">Join the Conversation &rarr;</a>
+      </div>
+    </div>
+
+    <div class="community-grid mt-6">
+      <div class="community-card">
+        <div class="community-card-header">
+          <div class="community-avatar-circle avatar-blue">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <span class="community-handle">@dev_sarah</span>
+        </div>
+        <p class="community-quote">&ldquo;Suggested a faster batching approach for the ETL pipeline.&rdquo;</p>
+        <div class="community-badge-wrap">
+          <span class="recognition-badge badge-blue">Contributor Pick</span>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-card-header">
+          <div class="community-avatar-circle avatar-purple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><path d="M9 21h6"/></svg>
+          </div>
+          <span class="community-handle">@alex_r</span>
+        </div>
+        <p class="community-quote">&ldquo;Shared a CLI script to simplify deployment with Bob.&rdquo;</p>
+        <div class="community-badge-wrap">
+          <span class="recognition-badge badge-purple">Top Contributor</span>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-card-header">
+          <div class="community-avatar-circle avatar-orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="community-handle">@priya_pat</span>
+        </div>
+        <p class="community-quote">&ldquo;Helped optimize memory usage in the recommendation engine.&rdquo;</p>
+        <div class="community-badge-wrap">
+          <span class="recognition-badge badge-orange">Community Winner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ready to Build / Download Banner -->
+<section class="download-section" id="download">
+  <div class="content-wrapper download-container">
+    <div class="download-content">
+      <p class="section-tag-light">READY TO BUILD?</p>
+      <h2 class="download-title">Download <span class="highlight-blue-light">Bob</span> and start modernizing today.</h2>
+      <p class="download-subheading">Get a 30-day free trial and experience how IBM Bob helps you build, test, modernize and innovate &mdash; faster.</p>
+      
+      <div class="download-buttons">
+        <a href="#download" class="btn btn-white btn-lg">Try Bob for Free &rarr;</a>
+        <a href="#download" class="btn btn-navy-outline btn-lg">View Documentation &rarr;</a>
+      </div>
+    </div>
+
+    <div class="download-visual">
+      <div class="platform-chips">
+        <div class="platform-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4h-13.051M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.799"/></svg>
+          <span>Windows</span>
+        </div>
+        <div class="platform-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.85-.92.04-2.03.62-2.68 1.37-.58.66-1.08 1.73-.95 2.76 1.03.08 2.06-.52 2.62-1.28z"/></svg>
+          <span>macOS</span>
+        </div>
+        <div class="platform-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .28-.22.5-.5.5h-1c-.28 0-.5-.22-.5-.5v-1c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v1zm0-3c0 .28-.22.5-.5.5h-1c-.28 0-.5-.22-.5-.5v-4c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v4z"/></svg>
+          <span>Linux</span>
+        </div>
+      </div>
+
+      <div class="download-laptop-glow">
+        <div class="bottom-laptop-screen">
+          <div class="laptop-code-mock">
+            <span class="editor-dot red"></span>
+            <span class="editor-dot yellow"></span>
+            <span class="editor-dot green"></span>
+            <div class="editor-code-snippet">
+              <span class="tok-kw">const</span> bob = <span class="tok-fn">createBobAgent</span>();<br>
+              <span class="tok-kw">await</span> bob.<span class="tok-fn">modernize</span>({<br>
+              &nbsp;&nbsp;target: <span class="tok-str">'cloud-native'</span><br>
+              });
+            </div>
+          </div>
+        </div>
+        <div class="laptop-bottom-rim"></div>
+        <div class="bottom-bob-peek">
+          <div class="peek-face">
+            <div class="bob-eye left"></div>
+            <div class="bob-eye right"></div>
+            <div class="bob-smile"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 {{ end }}

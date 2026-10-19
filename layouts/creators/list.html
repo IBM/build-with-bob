@@ -1,0 +1,115 @@
+{{ define "main" }}
+<div class="creators-directory-page">
+  <!-- Hero Section -->
+  <section class="creators-hero">
+    <div class="content-wrapper">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="{{ "/" | relURL }}" class="breadcrumb-link">&larr; Back to Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Creators</span>
+      </nav>
+      <div class="creators-hero-content">
+        <p class="section-tag">{{ with .Params.eyebrow }}{{ . }}{{ else }}CREATOR COMMUNITY & SHOWCASE{{ end }}</p>
+        <h1 class="page-title">{{ .Title }}</h1>
+        <p class="page-description max-w-700">
+          {{ with .Params.description }}{{ . }}{{ else }}Discover the software engineers and tech educators building and innovating with IBM Bob.{{ end }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creator Bios Grid -->
+  <section class="creators-bios-section">
+    <div class="content-wrapper">
+      <div class="creators-bios-list">
+        {{ range .Pages.ByWeight }}
+        <article class="creator-bio-card" id="{{ .File.TranslationBaseName }}">
+          <div class="creator-bio-grid">
+            <!-- Left: Avatar / Photo & Quick Links -->
+            <div class="creator-bio-media">
+              <div class="creator-bio-avatar-frame {{ .Params.theme_thumb }}">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="creator-bio-avatar-img" />
+              </div>
+              <div class="creator-social-links-wrap">
+                <span class="socials-heading">Connect with {{ with .Params.display_name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</span>
+                <div class="creator-social-badges">
+                  {{ with .Params.socials.instagram }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-badge instagram" aria-label="Instagram">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    <span>{{ $.Params.socials.instagram_handle }}</span>
+                  </a>
+                  {{ end }}
+
+                  {{ with .Params.socials.youtube }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-badge youtube" aria-label="YouTube">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    <span>{{ $.Params.socials.youtube_handle }}</span>
+                  </a>
+                  {{ end }}
+
+                  {{ with .Params.socials.tiktok }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-badge tiktok" aria-label="TikTok">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.48 6.27 6.27 0 0 0 1.87-4.48V8.71a8.16 8.16 0 0 0 4.9 1.62V6.89a4.85 4.85 0 0 1-1-.2z"/></svg>
+                    <span>{{ $.Params.socials.tiktok_handle }}</span>
+                  </a>
+                  {{ end }}
+
+                  {{ with .Params.socials.linkedin }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-badge linkedin" aria-label="LinkedIn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <span>{{ $.Params.socials.linkedin_handle }}</span>
+                  </a>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Bio Content & Focus -->
+            <div class="creator-bio-body">
+              <div class="creator-header-row">
+                <div>
+                  <h2 class="creator-full-name">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </h2>
+                  <p class="creator-title-role">{{ .Params.role }} &bull; <span class="creator-handle-tag">{{ .Params.handle }}</span></p>
+                </div>
+                {{ with .Params.tag }}
+                <span class="category-pill">{{ . }}</span>
+                {{ end }}
+              </div>
+
+              <div class="creator-bio-text">
+                {{ .Content }}
+              </div>
+
+              <div class="creator-bio-actions">
+                <a href="{{ .RelPermalink }}" class="btn btn-primary btn-sm">View Full Bio &amp; Profile &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="download-section" style="margin-top: 60px;">
+    <div class="content-wrapper">
+      <div class="download-card">
+        <div class="download-content">
+          <p class="section-tag-hero">JOIN THE BUILDERS</p>
+          <h2 class="download-title">Build alongside top creators with Bob.</h2>
+          <p class="download-description">
+            Get started today with AI-powered development, refactoring, and test automation.
+          </p>
+          <div class="download-buttons">
+            <a href="{{ "/" | relURL }}#download" class="btn btn-primary btn-lg">Try Bob for Free &rarr;</a>
+            <a href="{{ "/" | relURL }}#projects" class="btn btn-outline btn-lg">Explore Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

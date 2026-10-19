@@ -13,17 +13,10 @@
     content="{{ site.Params.description }}"
   >
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
-
-  <script
-    type="module"
-    src="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/ui-shell.min.js">
-  </script>
-
-  <script
-    type="module"
-    src="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/button.min.js">
-  </script>
 
   <!-- lottie-web for Bob waving animation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
@@ -31,36 +24,47 @@
 
 <body>
 
-  <cds-header aria-label="Build with Bob">
+  <header class="site-header">
+    <div class="content-wrapper header-inner">
+      <a href="{{ "/" | relURL }}" class="brand-logo" aria-label="IBM Build with Bob">
+        <span class="ibm-prefix">IBM</span>
+        <span class="brand-title">Build with <strong>Bob</strong></span>
+      </a>
 
-    <cds-header-name href="{{ "/" | relURL }}" prefix="IBM">
-      Build with Bob
-    </cds-header-name>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="{{ "/" | relURL }}#projects" class="nav-link">Projects</a>
+        <a href="{{ "creators/" | relURL }}" class="nav-link">Creators</a>
+        <a href="{{ "/" | relURL }}#community" class="nav-link">Community</a>
+        <a href="{{ "/" | relURL }}#journey" class="nav-link">Learn</a>
+        <a href="{{ "/" | relURL }}#download" class="nav-link">Try Bob</a>
+      </nav>
 
-    <cds-header-nav menu-bar-label="Build with Bob">
-
-      <cds-header-nav-item href="{{ "/" | relURL }}">
-        Home
-      </cds-header-nav-item>
-
-      <cds-header-nav-item href="{{ "/projects/" | relURL }}">
-        Projects
-      </cds-header-nav-item>
-
-      <cds-header-nav-item href="{{ "/about/" | relURL }}">
-        About
-      </cds-header-nav-item>
-
-    </cds-header-nav>
-
-  </cds-header>
+      <div class="header-cta">
+        <a href="{{ "/" | relURL }}#download" class="btn btn-primary btn-sm">Download Bob</a>
+      </div>
+    </div>
+  </header>
 
   <main id="main-content">
-
     {{ block "main" . }}
     {{ end }}
-
   </main>
+
+  <footer class="site-footer">
+    <div class="content-wrapper footer-inner">
+      <div class="footer-brand">
+        <span class="ibm-prefix">IBM</span>
+        <span class="footer-title">Build with <strong>Bob</strong></span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="{{ "/" | relURL }}#projects" class="footer-link">Projects</a>
+        <a href="{{ "creators/" | relURL }}" class="footer-link">Creators</a>
+        <a href="{{ "/" | relURL }}#community" class="footer-link">Community</a>
+        <a href="{{ "/" | relURL }}#journey" class="footer-link">Learn</a>
+        <a href="{{ "/" | relURL }}#download" class="footer-link">Try Bob</a>
+      </nav>
+    </div>
+  </footer>
 
   <script>
     (function () {
