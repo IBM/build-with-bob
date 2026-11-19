@@ -66,6 +66,37 @@
 
         <div class="hero-laptop-preview">
           <div class="laptop-screen">
+            <div class="laptop-code-stream">
+              <div class="code-stream-inner">
+                <div class="code-stream-content">
+                  <div class="stream-line"><span class="c-dim">// Bob Modernize Agent</span></div>
+                  <div class="stream-line"><span class="c-kw">const</span> <span class="c-var">bob</span> = <span class="c-fn">createBobAgent</span>();</div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">analyze</span>({</div>
+                  <div class="stream-line">&nbsp;&nbsp;<span class="c-prop">source</span>: <span class="c-str">'legacy-repo'</span>,</div>
+                  <div class="stream-line">&nbsp;&nbsp;<span class="c-prop">target</span>: <span class="c-str">'cloud-native'</span></div>
+                  <div class="stream-line">});</div>
+                  <div class="stream-line"><span class="c-dim">// Generating refactored modules</span></div>
+                  <div class="stream-line"><span class="c-kw">const</span> <span class="c-var">service</span> = <span class="c-fn">generateService</span>();</div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">testAndVerify</span>();</div>
+                  <div class="stream-line"><span class="c-dim">// Deploying modernization update</span></div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">deploy</span>(<span class="c-str">'production'</span>);</div>
+                </div>
+                <div class="code-stream-content" aria-hidden="true">
+                  <div class="stream-line"><span class="c-dim">// Bob Modernize Agent</span></div>
+                  <div class="stream-line"><span class="c-kw">const</span> <span class="c-var">bob</span> = <span class="c-fn">createBobAgent</span>();</div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">analyze</span>({</div>
+                  <div class="stream-line">&nbsp;&nbsp;<span class="c-prop">source</span>: <span class="c-str">'legacy-repo'</span>,</div>
+                  <div class="stream-line">&nbsp;&nbsp;<span class="c-prop">target</span>: <span class="c-str">'cloud-native'</span></div>
+                  <div class="stream-line">});</div>
+                  <div class="stream-line"><span class="c-dim">// Generating refactored modules</span></div>
+                  <div class="stream-line"><span class="c-kw">const</span> <span class="c-var">service</span> = <span class="c-fn">generateService</span>();</div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">testAndVerify</span>();</div>
+                  <div class="stream-line"><span class="c-dim">// Deploying modernization update</span></div>
+                  <div class="stream-line"><span class="c-kw">await</span> bob.<span class="c-fn">deploy</span>(<span class="c-str">'production'</span>);</div>
+                </div>
+              </div>
+            </div>
+
             <div class="modernize-card-floating">
               <div class="modernize-header">
                 <h5>Modernize</h5>
@@ -77,13 +108,6 @@
                 <li><span class="check-icon">&#10003;</span> Explain changes</li>
                 <li><span class="check-icon">&#10003;</span> Help you deploy</li>
               </ul>
-            </div>
-            <div class="code-bg-lines">
-              <div class="code-line w-80"></div>
-              <div class="code-line w-60"></div>
-              <div class="code-line w-90"></div>
-              <div class="code-line w-40"></div>
-              <div class="code-line w-70"></div>
             </div>
           </div>
           <div class="laptop-base"></div>
@@ -97,7 +121,7 @@
 <section class="journey-section" id="journey">
   <div class="content-wrapper text-center">
     <h2 class="section-heading">A Continuous Journey with Bob</h2>
-    <p class="section-subheading">From legacy code to what's next &mdash; build, test, modernize and innovate, with Bob by your side.</p>
+    <p class="section-subheading">From legacy code to what’s next: build, test, modernize and innovate with IBM Bob.</p>
     
     <div class="journey-lifecycle-wrapper">
       <div class="journey-quadrant build">
@@ -144,7 +168,7 @@
         </div>
         <div class="journey-text-content">
           <h3>Innovate</h3>
-          <p>Turn ideas into real-world solutions and greater impact.</p>
+          <p>Move from idea to production-ready software.</p>
         </div>
       </div>
 
@@ -192,14 +216,14 @@
 
       <a href="{{ "creators/kedasha-kerr/" | relURL }}" class="creator-card">
         <div class="creator-video-thumb thumb-3">
-          <img src="{{ "images/k.png" | relURL }}" alt="PikaCodes (Kedasha Kerr)" class="creator-thumb-img" />
+          <img src="{{ "images/k.png" | relURL }}" alt="Kedasha Kerr" class="creator-thumb-img" />
           <div class="video-play-btn" aria-label="Play video">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
         <div class="creator-info">
-          <h4 class="creator-name">PikaCodes</h4>
-          <p class="creator-handle">@pikacodes</p>
+          <h4 class="creator-name">Kedasha Kerr</h4>
+          <p class="creator-handle">@itsthatlady.dev</p>
           <span class="category-pill">Open Source & DevTools</span>
         </div>
       </a>
@@ -231,7 +255,7 @@
         <p class="section-subheading">Explore the finished projects, before-and-after transformations, and key technical takeaways.</p>
       </div>
       <div class="header-right-link">
-        <a href="#projects" class="link-arrow">View All Projects &rarr;</a>
+        <a href="{{ "videos/sajjad_khader.mp4" | relURL }}" target="_blank" rel="noopener noreferrer" class="link-arrow">View Creator Builds &rarr;</a>
       </div>
     </div>
 
@@ -242,64 +266,126 @@
           <div class="outcome-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="21" width="18" height="2"/><path d="M4 10h16M2 10l10-7 10 7M6 10v11M10 10v11M14 10v11M18 10v11"/></svg>
           </div>
-          <h3 class="outcome-title">Modernizing a Legacy Banking App</h3>
+          <span class="category-pill" style="font-size: 11px; padding: 2px 10px; margin-bottom: 8px; display: inline-block;">Build by Andrew Codesmith</span>
+          <h3 class="outcome-title">
+            <a href="https://www.youtube.com/shorts/Tsp6YJs9718" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Modernizing a Legacy Banking App</a>
+          </h3>
           <p class="outcome-metric"><strong>30%</strong> faster performance</p>
         </div>
 
-        <div class="code-compare-box">
+        <div class="code-compare-box animated-compare">
           <div class="code-block-mini before">
             <span class="code-label">Before</span>
-            <pre><code>// COBOL Bridge
-EXEC CICS
-  READ FILE('ACCT')
-  INTO(ACCT-REC)
-END-EXEC.</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim">// COBOL Bridge</span></div>
+                  <div class="code-line-item"><span class="c-kw">EXEC CICS</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">READ FILE</span>(<span class="c-str">'ACCT'</span>)</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-prop">INTO</span>(<span class="c-var">ACCT-REC</span>)</div>
+                  <div class="code-line-item"><span class="c-kw">END-EXEC.</span></div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim">// COBOL Bridge</span></div>
+                  <div class="code-line-item"><span class="c-kw">EXEC CICS</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">READ FILE</span>(<span class="c-str">'ACCT'</span>)</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-prop">INTO</span>(<span class="c-var">ACCT-REC</span>)</div>
+                  <div class="code-line-item"><span class="c-kw">END-EXEC.</span></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-compare-arrow animated-arrow">&rarr;</div>
           <div class="code-block-mini after">
             <span class="code-label">After (with Bob)</span>
-            <pre><code>// Microservice
-const account = await
-  db.accounts.findUnique({
-    where: { id }
-  });</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim">// Microservice</span></div>
+                  <div class="code-line-item"><span class="c-kw">const</span> <span class="c-var">account</span> = <span class="c-kw">await</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;db.<span class="c-fn">accounts</span>.<span class="c-fn">findUnique</span>({</div>
+                  <div class="code-line-item">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-prop">where</span>: { <span class="c-var">id</span> }</div>
+                  <div class="code-line-item">&nbsp;&nbsp;});</div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim">// Microservice</span></div>
+                  <div class="code-line-item"><span class="c-kw">const</span> <span class="c-var">account</span> = <span class="c-kw">await</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;db.<span class="c-fn">accounts</span>.<span class="c-fn">findUnique</span>({</div>
+                  <div class="code-line-item">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-prop">where</span>: { <span class="c-var">id</span> }</div>
+                  <div class="code-line-item">&nbsp;&nbsp;});</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+        <a href="https://www.youtube.com/shorts/Tsp6YJs9718" target="_blank" rel="noopener noreferrer" class="outcome-link">Watch Build Walkthrough &rarr;</a>
       </div>
 
       <!-- Project 2 -->
       <div class="outcome-card">
         <div class="outcome-top">
           <div class="outcome-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           </div>
-          <h3 class="outcome-title">Refactoring a Monolithic E-commerce API</h3>
+          <span class="category-pill" style="font-size: 11px; padding: 2px 10px; margin-bottom: 8px; display: inline-block;">Build by Kedasha Kerr</span>
+          <h3 class="outcome-title">
+            <a href="https://lnkd.in/p/gTsfCX4v" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Bringing IBM Bob to Vibe-Coded Applications</a>
+          </h3>
           <p class="outcome-metric"><strong>40%</strong> reduction in technical debt</p>
         </div>
 
-        <div class="code-compare-box">
+        <div class="code-compare-box animated-compare">
           <div class="code-block-mini before">
             <span class="code-label">Before</span>
-            <pre><code>// 2,400 LOC file
-function checkout(cart) {
-  validate(cart);
-  calcTax(); bill();
-}</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim">// 2,400 LOC file</span></div>
+                  <div class="code-line-item"><span class="c-kw">function</span> <span class="c-fn">checkout</span>(<span class="c-var">cart</span>) {</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">validate</span>(cart);</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">calcTax</span>(); <span class="c-fn">bill</span>();</div>
+                  <div class="code-line-item">}</div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim">// 2,400 LOC file</span></div>
+                  <div class="code-line-item"><span class="c-kw">function</span> <span class="c-fn">checkout</span>(<span class="c-var">cart</span>) {</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">validate</span>(cart);</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">calcTax</span>(); <span class="c-fn">bill</span>();</div>
+                  <div class="code-line-item">}</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-compare-arrow animated-arrow">&rarr;</div>
           <div class="code-block-mini after">
             <span class="code-label">After (with Bob)</span>
-            <pre><code>// Modular services
-export class CheckoutService {
-  constructor(tax, pay) {}
-  async process() {}
-}</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim">// Modular services</span></div>
+                  <div class="code-line-item"><span class="c-kw">export class</span> <span class="c-fn">CheckoutService</span> {</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">constructor</span>(<span class="c-var">tax</span>, <span class="c-var">pay</span>) {}</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">async</span> <span class="c-fn">process</span>() {}</div>
+                  <div class="code-line-item">}</div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim">// Modular services</span></div>
+                  <div class="code-line-item"><span class="c-kw">export class</span> <span class="c-fn">CheckoutService</span> {</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">constructor</span>(<span class="c-var">tax</span>, <span class="c-var">pay</span>) {}</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">async</span> <span class="c-fn">process</span>() {}</div>
+                  <div class="code-line-item">}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+        <a href="https://lnkd.in/p/gTsfCX4v" target="_blank" rel="noopener noreferrer" class="outcome-link">Watch Build Walkthrough &rarr;</a>
       </div>
 
       <!-- Project 3 -->
@@ -308,29 +394,59 @@ export class CheckoutService {
           <div class="outcome-icon-box">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
-          <h3 class="outcome-title">Modernizing a Data Processing Pipeline</h3>
-          <p class="outcome-metric"><strong>2x</strong> faster data processing</p>
+          <span class="category-pill" style="font-size: 11px; padding: 2px 10px; margin-bottom: 8px; display: inline-block;">Build by Sajjaad Khader</span>
+          <h3 class="outcome-title">
+            <a href="{{ "videos/sajjad_khader.mp4" | relURL }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Legacy Modernization with IBM Bob</a>
+          </h3>
         </div>
 
-        <div class="code-compare-box">
+        <div class="code-compare-box animated-compare">
           <div class="code-block-mini before">
             <span class="code-label">Before</span>
-            <pre><code># Serial Sync
-for record in stream:
-    transform(record)
-    save_to_disk()</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim">// Legacy COBOL</span></div>
+                  <div class="code-line-item"><span class="c-kw">EXEC CICS</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">READ FILE</span>(<span class="c-str">'ACCT'</span>)</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-prop">INTO</span>(<span class="c-var">ACCT-REC</span>)</div>
+                  <div class="code-line-item"><span class="c-kw">END-EXEC.</span></div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim">// Legacy COBOL</span></div>
+                  <div class="code-line-item"><span class="c-kw">EXEC CICS</span></div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-fn">READ FILE</span>(<span class="c-str">'ACCT'</span>)</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-prop">INTO</span>(<span class="c-var">ACCT-REC</span>)</div>
+                  <div class="code-line-item"><span class="c-kw">END-EXEC.</span></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="code-compare-arrow">&rarr;</div>
+          <div class="code-compare-arrow animated-arrow">&rarr;</div>
           <div class="code-block-mini after">
             <span class="code-label">After (with Bob)</span>
-            <pre><code># Vectorized Async
-df = polars.read_ipc()
-results = await asyncio.
-  gather(*workers)</code></pre>
+            <div class="mini-stream-wrapper">
+              <div class="mini-scan-line"></div>
+              <div class="mini-stream-inner">
+                <div class="mini-stream-chunk">
+                  <div class="code-line-item"><span class="c-dim"># Modern Python</span></div>
+                  <div class="code-line-item"><span class="c-kw">def</span> <span class="c-fn">get_account</span>(<span class="c-var">acc_id</span>: <span class="c-prop">str</span>):</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">return</span> db.<span class="c-fn">accounts</span>.</div>
+                  <div class="code-line-item">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-fn">find_one</span>({<span class="c-str">"id"</span>: acc_id})</div>
+                </div>
+                <div class="mini-stream-chunk" aria-hidden="true">
+                  <div class="code-line-item"><span class="c-dim"># Modern Python</span></div>
+                  <div class="code-line-item"><span class="c-kw">def</span> <span class="c-fn">get_account</span>(<span class="c-var">acc_id</span>: <span class="c-prop">str</span>):</div>
+                  <div class="code-line-item">&nbsp;&nbsp;<span class="c-kw">return</span> db.<span class="c-fn">accounts</span>.</div>
+                  <div class="code-line-item">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-fn">find_one</span>({<span class="c-str">"id"</span>: acc_id})</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <a href="#projects" class="outcome-link">View Project &rarr;</a>
+        <a href="{{ "videos/sajjad_khader.mp4" | relURL }}" target="_blank" rel="noopener noreferrer" class="outcome-link">Watch Build Walkthrough &rarr;</a>
       </div>
     </div>
   </div>
@@ -353,40 +469,43 @@ results = await asyncio.
     <div class="community-grid mt-6">
       <div class="community-card">
         <div class="community-card-header">
-          <div class="community-avatar-circle avatar-blue">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <img src="{{ "images/alain-airom.jpg" | relURL }}" alt="Alain Airom" class="community-avatar-img" />
+          <div>
+            <a href="https://www.linkedin.com/in/aairom/?locale=fr" target="_blank" rel="noopener noreferrer" class="community-handle" style="color: inherit; text-decoration: none;">Alain Airom</a>
+            <span class="community-user-tag">@aairom</span>
           </div>
-          <span class="community-handle">@dev_sarah</span>
         </div>
-        <p class="community-quote">&ldquo;Suggested a faster batching approach for the ETL pipeline.&rdquo;</p>
+        <p class="community-quote">&ldquo;IT Guy &middot; IBMer &middot; Open-Source Enthusiast<br>Sharing hands-on experiences and tech topics of interest &mdash; IBM or beyond. A bit of a <em>touche-&agrave;-tout</em>!&rdquo;</p>
         <div class="community-badge-wrap">
-          <span class="recognition-badge badge-blue">Contributor Pick</span>
+          <span class="recognition-badge badge-blue">IBMer &middot; Contributor</span>
         </div>
       </div>
 
       <div class="community-card">
         <div class="community-card-header">
-          <div class="community-avatar-circle avatar-purple">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><path d="M9 21h6"/></svg>
+          <img src="{{ "images/joshua-spurgin.png" | relURL }}" alt="Joshua Spurgin" class="community-avatar-img" />
+          <div>
+            <a href="https://www.youtube.com/@datanerdjosh" target="_blank" rel="noopener noreferrer" class="community-handle" style="color: inherit; text-decoration: none;">Joshua Spurgin</a>
+            <span class="community-user-tag">@DataNerdJosh</span>
           </div>
-          <span class="community-handle">@alex_r</span>
         </div>
-        <p class="community-quote">&ldquo;Shared a CLI script to simplify deployment with Bob.&rdquo;</p>
+        <p class="community-quote">&ldquo;AI Customer Success Engineer at IBM.<br>Focused on AI Governance, Agentic AI, AI Orchestration, and creating nerdy content.&rdquo;</p>
         <div class="community-badge-wrap">
-          <span class="recognition-badge badge-purple">Top Contributor</span>
+          <span class="recognition-badge badge-purple">IBMer &middot; Creator</span>
         </div>
       </div>
 
       <div class="community-card">
         <div class="community-card-header">
-          <div class="community-avatar-circle avatar-orange">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <img src="{{ "images/shalini-harkar.png" | relURL }}" alt="Shalini Harkar" class="community-avatar-img" />
+          <div>
+            <a href="https://www.ibm.com/think/author/shalini-harkar" target="_blank" rel="noopener noreferrer" class="community-handle" style="color: inherit; text-decoration: none;">Shalini Harkar</a>
+            <a href="https://www.ibm.com/think/author/shalini-harkar" target="_blank" rel="noopener noreferrer" class="community-user-tag" style="color: inherit; text-decoration: none;">@shalini-harkar</a>
           </div>
-          <span class="community-handle">@priya_pat</span>
         </div>
-        <p class="community-quote">&ldquo;Helped optimize memory usage in the recommendation engine.&rdquo;</p>
+        <p class="community-quote">&ldquo;Lead AI Advocate at IBM<br>Product Geek, PhD in Applied AI with specialisation in Governance and Security. ModLab Creator.&rdquo;</p>
         <div class="community-badge-wrap">
-          <span class="recognition-badge badge-orange">Community Winner</span>
+          <a href="https://www.ibm.com/think/author/shalini-harkar" target="_blank" rel="noopener noreferrer" class="recognition-badge badge-orange" style="text-decoration: none;">Lead AI Advocate</a>
         </div>
       </div>
     </div>

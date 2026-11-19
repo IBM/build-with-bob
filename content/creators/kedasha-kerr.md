@@ -1,7 +1,7 @@
 ---
-title: "Kedasha Kerr (PikaCodes)"
+title: "Kedasha Kerr"
 display_name: "Kedasha Kerr"
-handle: "@pikacodes"
+handle: "@itsthatlady.dev"
 role: "Software Engineer & Tech Educator"
 image: "images/k.png"
 tag: "Open Source & DevTools"
@@ -19,6 +19,15 @@ socials:
 ---
 
 Kedasha Kerr is a software engineer and tech educator who makes AI and technology accessible through educational content, workshops, and mentorship, helping aspiring developers – particularly underrepresented communities – build skills and advance their careers.
+
+### Featured Project: Bringing IBM Bob to Vibe-Coded Applications
+
+> **Build by Kedasha Kerr**
+> Streamlining and hardening vibe-coded and rapid-prototyped applications into modular, production-ready code with IBM Bob.
+
+[**Watch Build Walkthrough →**](https://lnkd.in/p/gTsfCX4v)
+
+---
 
 ### Focus Areas with Bob
 - **Open Source & DevTools**: Building open developer tools and interactive extensions powered by IBM Bob.

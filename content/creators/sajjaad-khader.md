@@ -19,6 +19,33 @@ socials:
 
 Sajjaad Khader is a software engineer, tech educator, and content creator who helps aspiring professionals break into the tech industry. He shares programming tutorials, career advice, and insights on AI and software engineering with his community.
 
+### Featured Project: Legacy Modernization with IBM Bob
+
+> **Build by Sajjaad Khader**
+> Modernizing legacy COBOL mainframe systems to cloud-native Python microservices using IBM Bob.
+
+#### Code Transformation
+
+**Before (Legacy COBOL):**
+```cobol
+// Legacy COBOL
+EXEC CICS
+  READ FILE('ACCT')
+  INTO(ACCT-REC)
+END-EXEC.
+```
+
+**After (with IBM Bob Modernization):**
+```python
+# Modern Python
+def get_account(acc_id: str):
+  return db.accounts.find_one({"id": acc_id})
+```
+
+[**Watch Build Walkthrough →**](/videos/sajjad_khader.mp4)
+
+---
+
 ### Focus Areas with Bob
 - **Cloud Architecture & Modernization**: Transforming legacy monolithic services into scalable cloud-native architectures.
 - **Hands-on Tutorials**: Step-by-step developer guides showcasing IBM Bob in real-world full-stack and cloud projects.

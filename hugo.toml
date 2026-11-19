@@ -1,4 +1,4 @@
-baseURL = "https://ibm.github.io/build-with-bob/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Build with Bob"
 
