@@ -25,7 +25,7 @@ Kedasha Kerr is a software engineer and tech educator who makes AI and technolog
 > **Build by Kedasha Kerr**
 > Streamlining and hardening vibe-coded and rapid-prototyped applications into modular, production-ready code with IBM Bob.
 
-[**Watch Build Walkthrough →**](https://lnkd.in/p/gTsfCX4v)
+[**Watch Build Walkthrough →**](../../videos/kedasha-kerr-walkthrough.mp4)
 
 ---
 
