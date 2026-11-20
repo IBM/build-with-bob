@@ -42,6 +42,8 @@ def get_account(acc_id: str):
   return db.accounts.find_one({"id": acc_id})
 ```
 
+{{< vertical-video src="videos/sajjad_khader.mp4" >}}
+
 [**Watch Build Walkthrough →**](/videos/sajjad_khader.mp4)
 
 ---
