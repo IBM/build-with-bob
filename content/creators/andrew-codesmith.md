@@ -2,7 +2,7 @@
 title: "Andrew Codesmith"
 handle: "@andrewcodesmith"
 role: "Software Engineer & Content Creator"
-image: "images/Andrew.png"
+image: "images/Andrew-circle.png"
 tag: "Modernize & Refactor"
 theme_thumb: "thumb-1"
 weight: 1

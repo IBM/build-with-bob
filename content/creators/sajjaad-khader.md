@@ -2,7 +2,7 @@
 title: "Sajjaad Khader"
 handle: "@sajjaadkhader"
 role: "Software Engineer & Tech Educator"
-image: "images/t.png"
+image: "images/t-circle.png"
 tag: "Cloud & Modernization"
 theme_thumb: "thumb-4"
 weight: 3

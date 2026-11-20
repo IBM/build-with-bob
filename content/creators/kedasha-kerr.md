@@ -3,7 +3,7 @@ title: "Kedasha Kerr"
 display_name: "Kedasha Kerr"
 handle: "@itsthatlady.dev"
 role: "Software Engineer & Tech Educator"
-image: "images/k.png"
+image: "images/k-circle.png"
 tag: "Open Source & DevTools"
 theme_thumb: "thumb-3"
 weight: 2
