@@ -1762,3 +1762,21 @@ body {
     min-width: 200px;
   }
 }
+
+.outcome-top {
+  flex: 1;
+}
+
+.outcome-image-box {
+  border: 1px solid rgba(69, 137, 255, 0.45);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(15, 98, 254, 0.2);
+}
+
+.outcome-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
