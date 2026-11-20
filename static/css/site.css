@@ -1782,3 +1782,8 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+.outcome-video {
+  background: #000;
+  object-fit: contain;
+}
