@@ -24,26 +24,6 @@ Sajjaad Khader is a software engineer, tech educator, and content creator who he
 > **Build by Sajjaad Khader**
 > Modernizing legacy COBOL mainframe systems to cloud-native Python microservices using IBM Bob.
 
-#### Code Transformation
-
-**Before (Legacy COBOL):**
-```cobol
-// Legacy COBOL
-EXEC CICS
-  READ FILE('ACCT')
-  INTO(ACCT-REC)
-END-EXEC.
-```
-
-**After (with IBM Bob Modernization):**
-```python
-# Modern Python
-def get_account(acc_id: str):
-  return db.accounts.find_one({"id": acc_id})
-```
-
-{{< vertical-video src="videos/sajjad_khader.mp4" >}}
-
 [**Watch Build Walkthrough →**](/videos/sajjad_khader.mp4)
 
 ---

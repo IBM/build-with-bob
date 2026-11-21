@@ -19,6 +19,16 @@ socials:
 
 Andrew Codesmith is a software engineer and content creator sharing insights on programming, AI, and tech careers. After transitioning into tech in his thirties, he helps others navigate career changes, build skills, and explore opportunities in tech and remote work.
 
+### Featured Project: Modernizing Legacy COBOL Applications with IBM Bob
+
+> **Build by Andrew Codesmith**
+> Modernizing legacy COBOL applications into maintainable, modern code with IBM Bob.
+
+[**Watch Build Walkthrough →**](/videos/andrew-codesmith-walkthrough.mp4)
+
+---
+
+
 ### Focus Areas with Bob
 - **Legacy Modernization**: Refactoring monolithic codebases and untangling tech debt using AI-assisted analysis.
 - **Developer Productivity**: Leveraging IBM Bob for rapid prototyping, automated code generation, and test suite creation.
